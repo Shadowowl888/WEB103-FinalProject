@@ -1,10 +1,30 @@
-# [PlatePal]
+# PlatePal
 
 CodePath WEB103 Final Project
 
 Designed and developed by: Julia Alfaro, Devin Khun, Michael Ly
 
 🔗 Link to deployed app:
+
+## Table of Contents
+* [PlatePal](#platepal)
+* [About](#about)
+  * [Description and Purpose](#description-and-purpose)
+  * [Inspiration](#inspiration)
+* [Tech Stack](#tech-stack)
+* [Features](#features)
+  * [Sign Up/Log In User Authentication](#sign-uplog-in-user-authentication)
+  * [Publish Recipes](#publish-recipes)
+  * [Recipes Feed](#recipes-feed)
+* [Additional Features](#additional-features)
+* [Installation Instructions](#installation-instructions)
+  * [Prerequisites](#prerequisites)
+  * [1. Clone the Repository](#1-clone-the-repository)
+  * [2. Install Client (Frontend)](#2-install-client-frontend)
+  * [3. Install Server (Backend)](#3-install-server-backend)
+  * [4. Set Up PostgreSQL Database](#4-set-up-postgresql-database)
+  * [5. Run the Client and Server](#5-run-the-client-and-server)
+  * [6. Access the Application](#6-access-the-application)
 
 ## About
 
@@ -28,25 +48,25 @@ DevOps: ESLint + Prettier, Docker
 
 ## Features
 
-### [Sign Up/Log In User Authentication]
+### Sign Up/Log In User Authentication
 
 Users must create an account to post recipes, and they’ll need to log in each time they visit. The platform will maintain a user database to manage accounts and authentication.
 
 [gif goes here]
 
-### [Publish Recipes]
+### Publish Recipes
 
 Users can publish recipes by providing the name, ingredients, steps, and relevant tags for filtering. Once a recipe is live, users can edit or delete it at any time.
 
 [gif goes here]
 
-### [Recipes Feed]
+### Recipes Feed
 
 The main page displays a variety of recipes sorted by categories such as newest, highest rated, or bookmarked. Users can filter recipes by dietary preference, meal type, or country, and view details by clicking on any recipe.
 
 [gif goes here]
 
-### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
+## Additional Features
 
 ## Installation Instructions
 
@@ -94,12 +114,14 @@ CONNECTION_STRING="postgresql://postgres:<password>@junction.proxy.rlwy.net:<por
 In separate terminal windows, run the following commands:
 
 * Client (Vite React):
+
 ```bash
 cd client
 npm run dev
 ```
 
 * Server (Express):
+
 ```bash
 cd ../server
 npm start

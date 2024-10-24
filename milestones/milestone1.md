@@ -29,3 +29,12 @@ Some challenges that came up this week was figuring which Tech stack was most ap
 ### 3. What additional support will you need in upcoming units as you continue to work on your final project?
 
 The support came from group collaboration and planning the user stories for the project.
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented required features:
+
+<img src='https://i.imgur.com/XRG57jH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='../FinalProject-Milestone1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LICEcap](https://www.cockos.com/licecap/)

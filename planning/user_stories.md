@@ -10,34 +10,42 @@ Reference the Writing User Stories final project guide in the course portal for 
 
 ## Draft User Stories
 
-### [User-Facing Features]
+### User-Facing Features
 
 User Registration and Authentication
 1. As a user, I want to be able to sign up for an account using my email and password, so I can save and manage my recipes.
 2. As a user, I want to log in to my account, so I can access my saved recipes and personal information.
 
 Create a New Recipe
+
 3. As a user, I want to be able to create a new recipe by entering the recipe name, ingredients, instructions, and optional images, so I can add it to my recipe collection.
 
 View Recipes
+
 4. As a user, I want to click on a recipe to view its details, so I can see the ingredients and instructions.
 
 Edit a Recipe
+
 5. As a user, I want to edit a recipe I’ve previously created, so I can update the ingredients or instructions as needed.
 
 Delete a Recipe
+
 6. As a user, I want to delete a recipe from my collection, so I can remove recipes I no longer want.
 
 Search for Recipes
+
 7. As a user, I want to be able to search for a recipe by its name or ingredients, so I can quickly find what I need.
 
 Filter Recipes by Category
+
 8. As a user, I want to filter recipes by categories like “breakfast,” “dinner,” or “dessert,” so I can find a recipe for a specific meal type.
 
 Like or Favorite a Recipe
+
 9. As a user, I want to be able to favorite or like a recipe, so I can mark it as one of my preferred dishes.
 
 Share a Recipe
+
 10. As a user, I want to share a recipe link with friends or on social media, so I can recommend dishes to others.
 
 11. As a home chef, I want to publish recipes, so that I can share my yummy recipes with others.
@@ -51,7 +59,7 @@ Share a Recipe
 19. As a home chef, I want to be able to leave a review on a recipe, so that I can share my experience making this meal as well as how yummy it was/ hard it was to make. 
 20. As a home chef, I want to be able to bookmark a recipe, so that it is easy for me to find my favorite recipes. 
 
-### [Development-Focused Features]
+### Development-Focused Features
 
 #### React Frontend
 1. Frontend Setup with React: As a developer, I want to set up a React frontend using Create React App, so I have a base structure for my project.
