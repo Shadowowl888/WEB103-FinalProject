@@ -68,6 +68,14 @@ The main page displays a variety of recipes sorted by categories such as newest,
 
 ## Additional Features
 
+### Review Other Recipes
+Users can leave reviews on other recipes (1-5 stars with commentary)
+This is what will determine the highest-rated recipes.
+### Bookmark Other Recipes
+Users can bookmark other recipes they really like so they can easily access them again
+### Filter By Ingredients
+Users can find recipes that save them a trip to the grocery store by selecting only the ingredients that they have, and the webpage will only show recipes that they can make with what they have
+
 ## Installation Instructions
 
 ### Prerequisites
