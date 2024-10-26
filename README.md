@@ -9,22 +9,12 @@ Designed and developed by: Julia Alfaro, Devin Khun, Michael Ly
 ## Table of Contents
 * [PlatePal](#platepal)
 * [About](#about)
-  * [Description and Purpose](#description-and-purpose)
-  * [Inspiration](#inspiration)
+* [Description and Purpose](#description-and-purpose)
+* [Inspiration](#inspiration)
 * [Tech Stack](#tech-stack)
 * [Features](#features)
-  * [Sign Up/Log In User Authentication](#sign-uplog-in-user-authentication)
-  * [Publish Recipes](#publish-recipes)
-  * [Recipes Feed](#recipes-feed)
 * [Additional Features](#additional-features)
 * [Installation Instructions](#installation-instructions)
-  * [Prerequisites](#prerequisites)
-  * [1. Clone the Repository](#1-clone-the-repository)
-  * [2. Install Client (Frontend)](#2-install-client-frontend)
-  * [3. Install Server (Backend)](#3-install-server-backend)
-  * [4. Set Up PostgreSQL Database](#4-set-up-postgresql-database)
-  * [5. Run the Client and Server](#5-run-the-client-and-server)
-  * [6. Access the Application](#6-access-the-application)
 
 ## About
 
@@ -69,10 +59,11 @@ The main page displays a variety of recipes sorted by categories such as newest,
 ## Additional Features
 
 ### Review Other Recipes
-Users can leave reviews on other recipes (1-5 stars with commentary)
-This is what will determine the highest-rated recipes.
+Users can leave reviews on other recipes (1-5 stars with commentary). This is what will determine the highest-rated recipes.
+
 ### Bookmark Other Recipes
 Users can bookmark other recipes they really like so they can easily access them again
+
 ### Filter By Ingredients
 Users can find recipes that save them a trip to the grocery store by selecting only the ingredients that they have, and the webpage will only show recipes that they can make with what they have
 
