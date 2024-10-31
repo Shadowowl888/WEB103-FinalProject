@@ -2,16 +2,31 @@
 
 Reference the Creating an Entity Relationship Diagram final project guide in the course portal for more information about how to complete this deliverable.
 
-## Create the List of Tables
+## List of Tables
 
-[👉🏾👉🏾👉🏾 List each table in your diagram]
+Base Tables:
+- `users`
+- `recipes`
+- `ingredients`
+- `dietary_restrictions`
+- `cuisines`
+- `meal_type`
 
-## Add the Entity Relationship Diagram
+Junction Tables:
+- `user_recipes`
+- `saved_recipes`
+- `favorited_recipe`
+- `recipe_dietary_restrictions`
+- `recipe_cuisine`
+- `recipe_meal_type`
 
-[👉🏾👉🏾👉🏾 Include an image or images of the diagram below. You may also wish to use the following markdown syntax to outline each table, as per your preference.]
+Linking Tables with additional attributes:
+- `recipe_reviews`
+- `recipe_ingredients`
 
-| Column Name | Type | Description |
-|-------------|------|-------------|
-| id | integer | primary key |
-| name | text | name of the shoe model |
-| ... | ... | ... |
+
+## Entity Relationship Diagram
+
+![Entity relatiion diagram image](image.png)
+
+For more details about the tables (with schema definition and comments), refer to original diagram on dbdiagram.io: https://dbdiagram.io/d/PlatePal-Entity-Relation-Diagram-Final-6720730cb4216d5a288bc9c1
