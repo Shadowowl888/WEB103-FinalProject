@@ -34,7 +34,7 @@ The support came from group collaboration and planning the user stories for the 
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://i.imgur.com/XRG57jH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/1AkCJSD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 <img src='../FinalProject-Milestone1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LICEcap](https://www.cockos.com/licecap/)

@@ -47,7 +47,6 @@ Like or Favorite a Recipe
 Share a Recipe
 
 10. As a user, I want to share a recipe link with friends or on social media, so I can recommend dishes to others.
-
 11. As a home chef, I want to publish recipes, so that I can share my yummy recipes with others.
 12. As a home chef, I want to be able to edit recipes, so that I can make them even more yummy or fix errors I might’ve made
 13. As a home chef, I want to be able to delete recipes so that I can delete recipes that my family did not give me permission to publish
