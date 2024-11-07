@@ -50,9 +50,11 @@ Users can publish recipes by providing the name, ingredients, steps, and relevan
 
 [gif goes here]
 
-### Recipes Feed
+### ✅  Recipes Feed 
 
-The main page displays a variety of recipes sorted by categories such as newest, highest rated, or bookmarked. Users can filter recipes by dietary preference, meal type, or country, and view details by clicking on any recipe.
+The main page displays a variety of recipes.
+![RecipeFeedClip1](https://github.com/user-attachments/assets/731c953c-5dd4-4c50-a54a-1eb1db1472b5)
+
 
 [gif goes here]
 
