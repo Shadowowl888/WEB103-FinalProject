@@ -1,0 +1,23 @@
+#landingPage{
+    position:absolute;
+    top:10vh;
+    left:0;
+    background-image: url("https://images.pexels.com/photos/594060/pexels-photo-594060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height:100%;
+    width: 100%
+  }
+  #landingText{
+    position:relative;
+    color:white;
+    top: 10vh;
+  }
+  #discoverRecipes{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+  button{
+    background-color:#129575;
+    color:white;
+  }

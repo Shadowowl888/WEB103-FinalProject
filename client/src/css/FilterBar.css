@@ -1,0 +1,20 @@
+#filter-bar li{
+    list-style:none;
+}
+#filter-bar{
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-align:center;
+    width: 80vw;
+    display:flex;
+    align-items:center;
+    list-style:none;
+    border: 2px solid #A0A7A3;
+    background-color: #129575;
+    border-radius: 10px;
+}
+details{
+    margin-right:20px;
+    padding: 0.5em;
+}

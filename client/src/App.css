@@ -1,0 +1,46 @@
+#root {
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+button{
+  background-color:#129575;
+  color:white;
+}
+.read-the-docs {
+  color: #888;
+}
+.regularPage{
+  position: relative;
+  top:10vh !important;
+  align-items:center;
+  justify-content:center;
+}
+.cardContainer, .recipeContainer{
+  top: 1vh;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap: 20px;
+  justify-content:center;
+  align-items:center;
+}
+#reviewsContainer{
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+  justify-content:center;
+  align-items:center;
+}
+.commentCard{
+  width: 800px;
+  height:300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  justify-content:center;
+  align-items:center;
+}
