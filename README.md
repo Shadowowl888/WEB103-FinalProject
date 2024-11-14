@@ -44,7 +44,7 @@ Users must create an account to post recipes, and they’ll need to log in each 
 
 [gif goes here]
 
-### Publish Recipes
+### ✅ Publish Recipes
 
 Users can publish recipes. Once a recipe is live, users can edit or delete it at any time.
 
