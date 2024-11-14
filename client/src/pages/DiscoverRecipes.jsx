@@ -2,13 +2,37 @@ import { useState, useEffect, useContext } from "react";
 import "../App.css";
 import FilterBar from "../components/FilterBar";
 import RecipeCard from "../components/RecipeCard";
-import recipeData from "../../dummyRecipes";
 import { FilterContext } from "../context/FilterContext";
+import RecipesAPI from "../services/RecipesAPI";
 
 const DiscoverRecipes = (props) => {
-  const { data: recipes } = recipeData;
+  const [recipes, setRecipes] = useState([])
   const [filteredRecipes, setFilteredRecipes] = useState([]);
-  const { selectedFilters, setSelectedFilters } = useContext(FilterContext);
+  const [refresh, setRefresh] = useState(false)
+  const {selectedFilters, setSelectedFilters } = useContext(FilterContext);
+ 
+  useEffect(() => {
+    (async() => {
+      try {
+        const recipeData = await RecipesAPI.getAllRecipes();
+        setRecipes(recipeData)
+        setFilteredRecipes(recipeData)
+      } catch (error){
+        throw error
+      }
+    })();
+  }, [refresh])
+
+
+  /*useEffect(() => {
+    if (allFiltersDefault()) {
+      setFilteredRecipes(recipes);
+    } else {
+      const newlyFilteredRecipes = applyFilters(recipes, selectedFilters);
+      setFilteredRecipes(newlyFilteredRecipes);
+    } 
+  }, [recipes, selectedFilters]); */
+
 
   const allFiltersDefault = () => {
     return Object.values(selectedFilters).every(
@@ -80,15 +104,15 @@ const DiscoverRecipes = (props) => {
     return newrep;
   };
 
-  useEffect(() => {
-    if (allFiltersDefault()) {
-      setFilteredRecipes(recipeData);
-    } else {
-      const newlyFilteredRecipes = applyFilters(recipeData, selectedFilters);
-      setFilteredRecipes(newlyFilteredRecipes);
-    }
-  }, [recipes, selectedFilters]);
 
+  const deleteRecipe = async(id) => {
+    try{
+      const response = await RecipesAPI.deleteRecipe(id)
+      setRefresh(!refresh)
+    } catch (error){
+      console.log("error deleting recipe")
+    }
+  }
   return (
     <div id="discoverRecipes" className="regularPage">
       <h1>Discover Recipes</h1>
@@ -101,13 +125,9 @@ const DiscoverRecipes = (props) => {
               key={recipe.id}
               name={recipe.name}
               id={recipe.id}
-              rating={recipe.rating}
-              picUrl={recipe.picUrl}
-              mealType={recipe.mealType}
-              mealCountry={recipe.mealCountry}
-              ingredients={recipe.ingredients}
-              diets={recipe.diets}
-              preparationSteps={recipe.preparationSteps}
+              img_url={recipe.img_url}
+              instructions={recipe.instructions}
+              deleteRecipe={()=> deleteRecipe(recipe.id)}
             />
           ))
         ) : (

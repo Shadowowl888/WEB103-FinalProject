@@ -1,9 +1,12 @@
+import {useState, useEffect} from "react"
 import "../App.css";
 import CommentCard from "../components/CommentCard";
-const ViewRecipe = () => {
-  return (
-    <div className="regularPage">
-      <h1>French Toast</h1>
+import { useParams } from "react-router-dom";
+import RecipesAPI from "../services/RecipesAPI";
+/* import the other stuff once the endpoints are ready
+
+   <div className="regularPage">
+      <h1>{recipe.name}</h1>
       <p>By: breakfastenthusiast123</p>
       <p>Meal Type: Breakfast</p>
       <p>American</p>
@@ -25,6 +28,59 @@ const ViewRecipe = () => {
         <li>Cook</li>
         <li>Add toppings and serve</li>
       </ol>
+      <h2>Reviews</h2>
+      <div id="reviewsContainer">
+        <CommentCard />
+        <CommentCard />
+        <CommentCard />
+        <h2>Write Your Own Review!</h2>
+      <div className="commentCard">
+      <form>
+        <h3>Review Title</h3> 
+        <input type="text" /> 
+        <h3> Select How Many Stars </h3> 
+        <h3>Give your feedback!</h3>
+        <textarea></textarea>
+        <br />
+        <button>Submit Review</button>
+      </form>
+      </div>
+      </div>
+
+    </div>
+
+
+*/
+const ViewRecipe = () => {
+  const {id} = useParams();
+
+  const [recipe, setRecipe] = useState({
+    name: "",
+    mealType: "",
+    img_url: "",
+    diets: [],
+    mealCountry: "",
+    ingredients: ["", "", "", "", ""],
+    instructions: "",
+  });
+  useEffect(() => {
+    (async() => {
+      try {
+        const recipeData = await RecipesAPI.getRecipeById(id);
+        setRecipe(recipeData)
+      } catch (error){
+        throw error
+      }
+    })();
+  }, [])
+
+
+  return (
+    <div className="regularPage">
+      <h1>{recipe.name}</h1>
+      <img src={recipe.img_url} />
+      <h2>Steps to Prepare</h2>
+      <p>{recipe.instructions}</p>
       <h2>Reviews</h2>
       <div id="reviewsContainer">
         <CommentCard />

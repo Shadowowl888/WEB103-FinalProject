@@ -34,7 +34,8 @@ function App() {
             <Route path="/me" element={<ViewProfile />} />
             <Route path="/new" element={<NewRecipe />} />
             <Route path="/viewRecipe/:id" element={<ViewRecipe />} />
-            <Route path="/editRecipe/:id" element={<EditRecipe />} />
+            <Route path="/editRecipe/:id" element={<EditRecipe
+            />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
           </Routes>
