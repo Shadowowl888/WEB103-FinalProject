@@ -46,9 +46,18 @@ Users must create an account to post recipes, and they’ll need to log in each 
 
 ### Publish Recipes
 
-Users can publish recipes by providing the name, ingredients, steps, and relevant tags for filtering. Once a recipe is live, users can edit or delete it at any time.
+Users can publish recipes. Once a recipe is live, users can edit or delete it at any time.
 
-[gif goes here]
+Create and View Recipe
+![AddRecipesClip](https://github.com/user-attachments/assets/8d482fee-892e-4d55-bc44-3cdce02fdf97)
+
+Edit a Recipe
+![EditRecipesClip](https://github.com/user-attachments/assets/58d6a4d8-2c90-49e6-a522-5517f81be8ef)
+
+
+Delete a Recipe
+![DeleteRecipeClip](https://github.com/user-attachments/assets/22f20b85-2feb-45ad-be35-f2cbf29488b0)
+
 
 ### ✅  Recipes Feed 
 
