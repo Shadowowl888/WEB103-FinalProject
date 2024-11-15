@@ -1,65 +1,102 @@
 {
-    "users": [
-      { "id": 1, "name": "John Doe", "email": "john.doe@example.com", "password": "password123" },
-      { "id": 2, "name": "Jane Smith", "email": "jane.smith@example.com", "password": "password456" }
-    ],
-    "recipes": [
-      { "id": 1, "name": "Spaghetti Bolognese", "instructions": "Boil pasta, cook meat, mix with sauce.", "img_url": "http://example.com/spaghetti.jpg" },
-      { "id": 2, "name": "Chicken Curry", "instructions": "Cook chicken, add curry sauce, simmer.", "img_url": "http://example.com/chicken_curry.jpg" }
-    ],
-    "ingredients": [
-      { "id": 1, "name": "Spaghetti" },
-      { "id": 2, "name": "Ground Beef" },
-      { "id": 3, "name": "Tomato Sauce" },
-      { "id": 4, "name": "Chicken" },
-      { "id": 5, "name": "Curry Sauce" }
-    ],
-    "dietary_restrictions": [
-      { "id": 1, "restriction": "Gluten-Free" },
-      { "id": 2, "restriction": "Vegan" }
-    ],
-    "cuisines": [
-      { "id": 1, "cuisine": "Italian" },
-      { "id": 2, "cuisine": "Indian" }
-    ],
-    "meal_type": [
-      { "id": 1, "meal_type": "Dinner" },
-      { "id": 2, "meal_type": "Lunch" },
-      { "id": 3, "meal_type": "Breakfast" }
-    ],
-    "user_recipes": [
-      { "user_id": 1, "recipe_id": 1 },
-      { "user_id": 2, "recipe_id": 2 }
-    ],
-    "saved_recipes": [
-      { "user_id": 1, "recipe_id": 2 },
-      { "user_id": 2, "recipe_id": 1 }
-    ],
-    "favorited_recipe": [
-      { "user_id": 1, "recipe_id": 1 },
-      { "user_id": 2, "recipe_id": 2 }
-    ],
-    "recipe_reviews": [
-      { "id": 1, "recipe_id": 1, "user_id": 1, "rating": 5, "comment": "Delicious!", "created_at": "2023-01-01T12:00:00Z" },
-      { "id": 2, "recipe_id": 2, "user_id": 2, "rating": 4, "comment": "Very good.", "created_at": "2023-01-02T12:00:00Z" }
-    ],
-    "recipe_ingredients": [
-      { "recipe_id": 1, "ingredient_id": 1, "quantity": 200, "unit": "grams" },
-      { "recipe_id": 1, "ingredient_id": 2, "quantity": 100, "unit": "grams" },
-      { "recipe_id": 1, "ingredient_id": 3, "quantity": 150, "unit": "ml" },
-      { "recipe_id": 2, "ingredient_id": 4, "quantity": 200, "unit": "grams" },
-      { "recipe_id": 2, "ingredient_id": 5, "quantity": 150, "unit": "ml" }
-    ],
-    "recipe_dietary_restrictions": [
-      { "recipe_id": 1, "dietary_id": 1 },
-      { "recipe_id": 2, "dietary_id": 2 }
-    ],
-    "recipe_cuisine": [
-      { "recipe_id": 1, "cuisine_id": 1 },
-      { "recipe_id": 2, "cuisine_id": 2 }
-    ],
-    "recipe_meal_type": [
-      { "recipe_id": 1, "meal_type_id": 1 },
-      { "recipe_id": 2, "meal_type_id": 2 }
-    ]
+  "users": [
+    { "id": 1, "name": "John Doe", "email": "john@example.com", "password": "password123" },
+    { "id": 2, "name": "Jane Smith", "email": "jane@example.com", "password": "password123" },
+    { "id": 3, "name": "Alice Johnson", "email": "alice@example.com", "password": "password123" },
+    { "id": 4, "name": "Bob Brown", "email": "bob@example.com", "password": "password123" }
+  ],
+  "recipes": [
+    { "id": 1, "name": "Spaghetti Bolognese", "instructions": "Cook the pasta according to the package instructions. In a separate pan, cook the minced meat until browned. Add the tomato sauce and simmer for 20 minutes. Serve the sauce over the pasta.", "img_url": "https://example.com/spaghetti-bolognese.jpg" },
+    { "id": 2, "name": "Chicken Curry", "instructions": "Cook the chicken in a pan until browned. Add the curry sauce and simmer for 30 minutes. Serve with rice.", "img_url": "https://example.com/chicken-curry.jpg" },
+    { "id": 3, "name": "Vegetable Stir Fry", "instructions": "Stir fry the vegetables in a pan with soy sauce. Serve with rice or noodles.", "img_url": "https://example.com/vegetable-stir-fry.jpg" },
+    { "id": 4, "name": "Beef Tacos", "instructions": "Cook the beef in a pan until browned. Serve in taco shells with lettuce, cheese, and salsa.", "img_url": "https://example.com/beef-tacos.jpg" }
+  ],
+  "ingredients": [
+    { "id": 1, "name": "Spaghetti" },
+    { "id": 2, "name": "Minced Meat" },
+    { "id": 3, "name": "Tomato Sauce" },
+    { "id": 4, "name": "Chicken" },
+    { "id": 5, "name": "Curry Sauce" },
+    { "id": 6, "name": "Vegetables" },
+    { "id": 7, "name": "Soy Sauce" },
+    { "id": 8, "name": "Beef" },
+    { "id": 9, "name": "Taco Shells" },
+    { "id": 10, "name": "Lettuce" },
+    { "id": 11, "name": "Cheese" },
+    { "id": 12, "name": "Salsa" }
+  ],
+  "dietary_restrictions": [
+    { "id": 1, "restriction": "Gluten-Free" },
+    { "id": 2, "restriction": "Vegetarian" },
+    { "id": 3, "restriction": "Vegan" },
+    { "id": 4, "restriction": "Nut-Free" }
+  ],
+  "cuisines": [
+    { "id": 1, "cuisine": "Italian" },
+    { "id": 2, "cuisine": "Indian" },
+    { "id": 3, "cuisine": "Chinese" },
+    { "id": 4, "cuisine": "Mexican" }
+  ],
+  "meal_type": [
+    { "id": 1, "meal_type": "Dinner" },
+    { "id": 2, "meal_type": "Lunch" },
+    { "id": 3, "meal_type": "Breakfast" },
+    { "id": 4, "meal_type": "Snack" }
+  ],
+  "user_recipes": [
+    { "user_id": 1, "recipe_id": 1 },
+    { "user_id": 2, "recipe_id": 2 },
+    { "user_id": 3, "recipe_id": 3 },
+    { "user_id": 4, "recipe_id": 4 }
+  ],
+  "saved_recipes": [
+    { "user_id": 1, "recipe_id": 2 },
+    { "user_id": 2, "recipe_id": 1 },
+    { "user_id": 3, "recipe_id": 4 },
+    { "user_id": 4, "recipe_id": 3 }
+  ],
+  "favorited_recipe": [
+    { "user_id": 1, "recipe_id": 1 },
+    { "user_id": 2, "recipe_id": 2 },
+    { "user_id": 3, "recipe_id": 3 },
+    { "user_id": 4, "recipe_id": 4 }
+  ],
+  "recipe_reviews": [
+    { "id": 1, "recipe_id": 1, "user_id": 1, "rating": 5, "comment": "Delicious!", "created_at": "2023-01-01T12:00:00Z" },
+    { "id": 2, "recipe_id": 2, "user_id": 2, "rating": 4, "comment": "Very good.", "created_at": "2023-01-02T12:00:00Z" },
+    { "id": 3, "recipe_id": 3, "user_id": 3, "rating": 5, "comment": "Amazing!", "created_at": "2023-01-03T12:00:00Z" },
+    { "id": 4, "recipe_id": 4, "user_id": 4, "rating": 4, "comment": "Tasty!", "created_at": "2023-01-04T12:00:00Z" }
+  ],
+  "recipe_ingredients": [
+    { "recipe_id": 1, "ingredient_id": 1, "quantity": 200, "unit": "grams" },
+    { "recipe_id": 1, "ingredient_id": 2, "quantity": 100, "unit": "grams" },
+    { "recipe_id": 1, "ingredient_id": 3, "quantity": 150, "unit": "ml" },
+    { "recipe_id": 2, "ingredient_id": 4, "quantity": 200, "unit": "grams" },
+    { "recipe_id": 2, "ingredient_id": 5, "quantity": 150, "unit": "ml" },
+    { "recipe_id": 3, "ingredient_id": 6, "quantity": 300, "unit": "grams" },
+    { "recipe_id": 3, "ingredient_id": 7, "quantity": 50, "unit": "ml" },
+    { "recipe_id": 4, "ingredient_id": 8, "quantity": 200, "unit": "grams" },
+    { "recipe_id": 4, "ingredient_id": 9, "quantity": 10, "unit": "pieces" },
+    { "recipe_id": 4, "ingredient_id": 10, "quantity": 50, "unit": "grams" },
+    { "recipe_id": 4, "ingredient_id": 11, "quantity": 100, "unit": "grams" },
+    { "recipe_id": 4, "ingredient_id": 12, "quantity": 100, "unit": "ml" }
+  ],
+  "recipe_dietary_restrictions": [
+    { "recipe_id": 1, "dietary_id": 1 },
+    { "recipe_id": 2, "dietary_id": 2 },
+    { "recipe_id": 3, "dietary_id": 3 },
+    { "recipe_id": 4, "dietary_id": 4 }
+  ],
+  "recipe_cuisine": [
+    { "recipe_id": 1, "cuisine_id": 1 },
+    { "recipe_id": 2, "cuisine_id": 2 },
+    { "recipe_id": 3, "cuisine_id": 3 },
+    { "recipe_id": 4, "cuisine_id": 4 }
+  ],
+  "recipe_meal_type": [
+    { "recipe_id": 1, "meal_type_id": 1 },
+    { "recipe_id": 2, "meal_type_id": 2 },
+    { "recipe_id": 3, "meal_type_id": 3 },
+    { "recipe_id": 4, "meal_type_id": 4 }
+  ]
 }
