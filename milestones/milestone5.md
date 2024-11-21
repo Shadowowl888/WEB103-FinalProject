@@ -77,11 +77,11 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 ### 1. What went well during this unit?
 
-We were able to get the endpoints for filtering recipes by cuisine, meal type, dietary restrictions, and ingredients working. 
+We were able to get the endpoints working for filtering recipes by cuisine, meal type, dietary restrictions, and ingredients working. 
 
 ### 2. What were some challenges your group faced in this unit?
 
-We faced challenges setting up user anthentication, it has yet to be implemented.
+Due school assignments and our busy schedules, we were unable to implement one of our planned features, user authentication, and deploy our web app to railway. 
 
 ### 3. What were some of the highlights or achievements that you are most proud of in this project?
 
@@ -89,8 +89,8 @@ Getting the filter system to work was a good feeling.
 
 ### 4. Reflecting on your web development journey so far, how have you grown since the beginning of the course?
 
-We've learned so much about the fundementals backend development and how it is connected to the database and front end. 
+We've learned so much about the fundementals of backend development and how it is connected to the database and front end. 
 
 ### 5. Looking ahead, what are your goals related to web development, and what steps do you plan to take to achieve them?
 
-We would like to learn more about advanced web development caoncepts, like CI/CD and setting up your own database. 
+We would like to learn more about advanced web development concepts, like CI/CD and setting up your own database. 
