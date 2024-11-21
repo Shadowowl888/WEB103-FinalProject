@@ -79,7 +79,7 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 
 ### 1. What went well during this unit?
 
-We were able to get the endpoints working for filtering recipes by cuisine, meal type, dietary restrictions, and ingredients working. 
+We were able to get the endpoints working for filtering recipes by ingredients
 
 ### 2. What were some challenges your group faced in this unit?
 
