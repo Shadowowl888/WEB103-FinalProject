@@ -75,8 +75,10 @@ Users can leave reviews on other recipes (1-5 stars with commentary). This is wh
 ### Bookmark Other Recipes
 Users can bookmark other recipes they really like so they can easily access them again
 
-### Filter By Ingredients
+### ✅  Filter By Ingredients
 Users can find recipes that save them a trip to the grocery store by selecting only the ingredients that they have, and the webpage will only show recipes that they can make with what they have
+![fulldemo1](https://github.com/user-attachments/assets/8a301422-7338-452f-9b78-11044c9fa508)
+
 
 ## Installation Instructions
 
