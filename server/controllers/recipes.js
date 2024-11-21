@@ -55,7 +55,7 @@ const createRecipe = async (req, res) => {
             }
         }
 
-        if (ingredients && ingredients.length > 0) {
+       if (ingredients && ingredients.length > 0) {
             for (const ingredient of ingredients) {
                 const { name, quantity, unit } = ingredient;
                 let ingredientResult = await client.query(
@@ -74,7 +74,7 @@ const createRecipe = async (req, res) => {
                     [recipeId, ingredientId, quantity, unit]
                 );
             }
-        }
+        }  
 
         if (dietaryRestrictions && dietaryRestrictions.length > 0) {
             for (const restriction of dietaryRestrictions) {

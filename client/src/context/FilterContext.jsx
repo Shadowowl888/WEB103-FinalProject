@@ -4,10 +4,10 @@ export const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
   const [selectedFilters, setSelectedFilters] = useState({
-    meals: [],
+    mealTypes: [],
     ingredients: [],
-    excludedingredients: [],
-    diets: [],
+    excludedIngredients: [],
+    dietaryRestrictions: [],
     cuisines: [],
   });
 

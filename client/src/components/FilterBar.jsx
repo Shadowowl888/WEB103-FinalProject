@@ -172,7 +172,7 @@ const FilterBar = ({onChange}) => {
               <label htmlFor="fruit">Fruit</label>
               <input
                 type="checkbox"
-                name="excludedingredients[]"
+                name="excludedIngredients[]"
                 value="fruit"
                 onChange={handleChange}
               />
@@ -181,7 +181,7 @@ const FilterBar = ({onChange}) => {
               <label htmlFor="beef">Beef</label>
               <input
                 type="checkbox"
-                name="excludedingredients[]"
+                name="excludedIngredients[]"
                 value="beef"
                 onChange={handleChange}
               />
@@ -190,7 +190,7 @@ const FilterBar = ({onChange}) => {
               <label htmlFor="sugar">Sugar</label>
               <input
                 type="checkbox"
-                name="excludedingredients[]"
+                name="excludedIngredients[]"
                 value="sugar"
                 onChange={handleChange}
               />
@@ -199,7 +199,7 @@ const FilterBar = ({onChange}) => {
               <label htmlFor="chicken">Chicken</label>
               <input
                 type="checkbox"
-                name="excludedingredients[]"
+                name="excludedIngredients[]"
                 value="chicken"
                 onChange={handleChange}
               />
@@ -208,7 +208,7 @@ const FilterBar = ({onChange}) => {
               <label htmlFor="pork">Pork</label>
               <input
                 type="checkbox"
-                name="excludedingredients[]"
+                name="excludedIngredients[]"
                 value="pork"
                 onChange={handleChange}
               />
@@ -217,7 +217,7 @@ const FilterBar = ({onChange}) => {
               <label htmlFor="fruit">Fruit</label>
               <input
                 type="checkbox"
-                name="excludedingredients[]"
+                name="excludedIngredients[]"
                 value="fruit"
                 onChange={handleChange}
               />

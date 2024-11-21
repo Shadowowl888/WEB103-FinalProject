@@ -6,33 +6,31 @@ import { FilterContext } from "../context/FilterContext";
 import RecipesAPI from "../services/RecipesAPI";
 
 const DiscoverRecipes = (props) => {
-  const [recipes, setRecipes] = useState([])
+  const [recipes, setRecipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
-  const [refresh, setRefresh] = useState(false)
-  const {selectedFilters, setSelectedFilters } = useContext(FilterContext);
- 
+  const [refresh, setRefresh] = useState(false);
+  const { selectedFilters, setSelectedFilters } = useContext(FilterContext);
+
   useEffect(() => {
-    (async() => {
+    (async () => {
       try {
         const recipeData = await RecipesAPI.getAllRecipes();
-        setRecipes(recipeData)
-        setFilteredRecipes(recipeData)
-      } catch (error){
-        throw error
+        setRecipes(recipeData);
+        setFilteredRecipes(recipeData);
+      } catch (error) {
+        throw error;
       }
     })();
-  }, [refresh])
+  }, [refresh]);
 
-
-  /*useEffect(() => {
+  useEffect(() => {
     if (allFiltersDefault()) {
       setFilteredRecipes(recipes);
     } else {
       const newlyFilteredRecipes = applyFilters(recipes, selectedFilters);
       setFilteredRecipes(newlyFilteredRecipes);
-    } 
-  }, [recipes, selectedFilters]); */
-
+    }
+  }, [recipes, selectedFilters]);
 
   const allFiltersDefault = () => {
     return Object.values(selectedFilters).every(
@@ -49,16 +47,33 @@ const DiscoverRecipes = (props) => {
     console.log("The filters we are applying", filters);
     const newrep = recipes.filter((recipe) => {
       //Filter by meal type
-      if (filters.meals && filters.meals.length > 0) {
-        if (!filters.meals.includes(recipe.mealType)) {
+      /*if (filters.mealTypes && filters.mealTypes.length > 0) {
+        if (!filters.mealTypes.includes(recipe.mealType)) {
+          return false;
+        }
+      }*/
+
+      if (filters.mealTypes && filters.mealTypes.length > 0) {
+        const recipeMealsLower = recipe.mealTypes.map((meal) =>
+          meal.toLowerCase()
+        );
+        const desiredMeals = filters.mealTypes.map((meal) =>
+          meal.toLowerCase()
+        );
+        if (!recipeMealsLower.some((meal) => desiredMeals.includes(meal))) {
           return false;
         }
       }
 
       //Diets filter
-      if (filters.diets && filters.diets.length > 0) {
-        const recipeDietsLower = recipe.diets.map((diet) => diet.toLowerCase());
-        const desiredDietsLower = filters.diets.map((diet) =>
+      if (
+        filters.dietaryRestrictions &&
+        filters.dietaryRestrictions.length > 0
+      ) {
+        const recipeDietsLower = recipe.dietaryRestrictions.map((diet) =>
+          diet.toLowerCase()
+        );
+        const desiredDietsLower = filters.dietaryRestrictions.map((diet) =>
           diet.toLowerCase()
         );
         if (
@@ -68,13 +83,23 @@ const DiscoverRecipes = (props) => {
         }
       }
       //Country filter
-      if (filters.cuisines && filters.cuisines.length > 0) {
+      /*if (filters.cuisines && filters.cuisines.length > 0) {
         if (!filters.cuisines.includes(recipe.mealCountry)) {
           return false;
         }
+
+      } */
+
+      if (filters.cuisines && filters.cuisines.length > 0) {
+        const cuisines = recipe.dietaryRestrictions.map((c) => c.toLowerCase());
+        const desired = filters.dietaryRestrictions.map((d) => d.toLowerCase());
+        if (!cuisines.some((c) => desired.includes(c))) {
+          return false;
+        }
       }
+
       //Has these ingredients
-      if (filters.ingredients && filters.ingredients.length > 0) {
+      /*  if (filters.ingredients && filters.ingredients.length > 0) {
         if (
           !filters.ingredients.every((ingredient) =>
             recipe.ingredients.includes(ingredient)
@@ -82,16 +107,47 @@ const DiscoverRecipes = (props) => {
         ) {
           return false;
         }
-      }
+      } */
 
       //Excluded Ingredients
-      if (
+      /*if (
         filters.excludedingredients &&
         filters.excludedingredients.length > 0
       ) {
         if (
           filters.excludedingredients.some((ingredient) =>
             recipe.ingredients.some((i) => i.ingredient == ingredient)
+          )
+        ) {
+          return false;
+        }
+      } */
+
+      // Has these ingredients
+      if (filters.ingredients && filters.ingredients.length > 0) {
+        if (
+          !filters.ingredients.every(
+            (ingredient) =>
+              recipe.ingredients.some(
+                (i) => i.name.toLowerCase() === ingredient.toLowerCase()
+              ) // Case-insensitive comparison
+          )
+        ) {
+          return false;
+        }
+      }
+
+      // Excluded Ingredients
+      if (
+        filters.excludedIngredients &&
+        filters.excludedIngredients.length > 0
+      ) {
+        if (
+          filters.excludedIngredients.some(
+            (ingredient) =>
+              recipe.ingredients.some(
+                (i) => i.name.toLowerCase() === ingredient.toLowerCase()
+              ) // Case-insensitive comparison
           )
         ) {
           return false;
@@ -104,15 +160,14 @@ const DiscoverRecipes = (props) => {
     return newrep;
   };
 
-
-  const deleteRecipe = async(id) => {
-    try{
-      const response = await RecipesAPI.deleteRecipe(id)
-      setRefresh(!refresh)
-    } catch (error){
-      console.log("error deleting recipe")
+  const deleteRecipe = async (id) => {
+    try {
+      const response = await RecipesAPI.deleteRecipe(id);
+      setRefresh(!refresh);
+    } catch (error) {
+      console.log("error deleting recipe");
     }
-  }
+  };
   return (
     <div id="discoverRecipes" className="regularPage">
       <h1>Discover Recipes</h1>
@@ -127,7 +182,7 @@ const DiscoverRecipes = (props) => {
               id={recipe.id}
               img_url={recipe.img_url}
               instructions={recipe.instructions}
-              deleteRecipe={()=> deleteRecipe(recipe.id)}
+              deleteRecipe={() => deleteRecipe(recipe.id)}
             />
           ))
         ) : (
