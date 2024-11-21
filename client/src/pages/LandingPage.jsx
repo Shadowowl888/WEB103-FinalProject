@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div id="landingPage">
       <div id="landingText">
-        <h1>Get Cooking! </h1>
+        <h1 id="landingHeader">Get Cooking! </h1>
         <p>Simple ways to discover new, tasty recipes</p>
         <Link to="/signup">
           <button>Start Cooking!</button>

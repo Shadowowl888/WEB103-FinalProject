@@ -18,3 +18,9 @@ details{
     margin-right:20px;
     padding: 0.5em;
 }
+a{
+    color:black;
+}
+a:hover{
+    color:#129575;
+}
